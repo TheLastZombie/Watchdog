@@ -1,0 +1,14 @@
+{
+  "owner": "123456789012345678",
+  "prefix": "!",
+  "blur": {
+    "webcam": false,
+    "screenshot": 10
+  },
+  "reactions": {
+    "progress": "🔄",
+    "success": "✅",
+    "error": "❎"
+  },
+  "token": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+}

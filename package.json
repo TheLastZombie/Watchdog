@@ -1,0 +1,46 @@
+{
+  "name": "watchdog",
+  "description": "The next evolution of StalkBot3, carefully rewritten from the ground up.",
+  "keywords": [
+    "access",
+    "automation",
+    "bot",
+    "computer",
+    "control",
+    "desktop",
+    "discord",
+    "discord.js",
+    "remote"
+  ],
+  "homepage": "https://github.com/TheLastZombie/Watchdog",
+  "bugs": "https://github.com/TheLastZombie/Watchdog/issues",
+  "license": "MIT",
+  "author": "TheLastZombie",
+  "main": "index.js",
+  "bin": {
+    "watchdog": "index.js"
+  },
+  "repository": "TheLastZombie/Watchdog",
+  "scripts": {
+    "dist": "npx pkg .",
+    "lint": "npx standard --fix",
+    "postinstall": "node utilities/list-requirements.js",
+    "start": "node ."
+  },
+  "dependencies": {
+    "boxen": "^4.2.0",
+    "discord.js": "^11.6.4",
+    "discord.js-commando": "^0.10.0",
+    "node-notifier": "^8.0.0",
+    "node-webcam": "^0.6.4",
+    "robotjs": "^0.6.0",
+    "say": "^0.16.0",
+    "screenshot-desktop": "^1.12.2",
+    "sharp": "^0.26.2",
+    "sqlite": "^2.9.3"
+  },
+  "devDependencies": {
+    "pkg": "^4.4.9",
+    "standard": "^14.3.4"
+  }
+}
