@@ -4,7 +4,7 @@ module.exports = class TypeCommand extends commando.Command {
   constructor (client) {
     super(client, {
       name: 'type',
-      aliases: ['enter', 'input'],
+      aliases: ['enter', 'input', 'keyboard'],
       group: 'fun',
       memberName: 'type',
       description: 'Enters specitied text into whatever program is focused right now.',

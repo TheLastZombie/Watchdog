@@ -38,8 +38,7 @@ module.exports = class ClipboardCommand extends commando.Command {
       clipboardy.writeSync(args.message)
       msg.react(config.reactions.success)
     } else {
-      msg.reply('```' + clipboardy.readSync().replace(/`/g, '﻿`') + '```')
-        .then(msg.react(config.reactions.success))
+      msg.reply('```' + clipboardy.readSync().replace(/`/g, '﻿`') + '```').then(msg.react(config.reactions.success))
     }
   }
 }
