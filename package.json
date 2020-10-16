@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "boxen": "^4.2.0",
+    "clipboardy": "^2.3.0",
     "discord.js": "^11.6.4",
     "discord.js-commando": "^0.10.0",
     "node-notifier": "^8.0.0",
