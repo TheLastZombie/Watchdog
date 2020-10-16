@@ -37,7 +37,8 @@
     "say": "^0.16.0",
     "screenshot-desktop": "^1.12.2",
     "sharp": "^0.26.2",
-    "sqlite": "^2.9.3"
+    "sqlite": "^2.9.3",
+    "systeminformation": "^4.27.10"
   },
   "devDependencies": {
     "pkg": "^4.4.9",

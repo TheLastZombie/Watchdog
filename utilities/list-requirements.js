@@ -6,8 +6,7 @@ var data = {
     color: 'gray',
     command: 'brew install',
     requirements: [
-      ['ImageSnap', 'http://iharder.sourceforge.net/current/macosx/imagesnap', 'imagesnap'],
-      ['Neofetch', 'https://github.com/dylanaraps/neofetch', 'neofetch']
+      ['ImageSnap', 'http://iharder.sourceforge.net/current/macosx/imagesnap', 'imagesnap']
     ]
   },
   linux: {
@@ -18,8 +17,7 @@ var data = {
       ['Festival', 'http://www.cstr.ed.ac.uk/projects/festival', 'festival festvox-kallpc16k'],
       ['fswebcam', 'https://sanslogic.co.uk/fswebcam', 'fswebcam'],
       ['ImageMagick', 'https://imagemagick.org', 'imagemagick'],
-      ['libnotify', 'https://gitlab.gnome.org/GNOME/libnotify', 'libnotify-bin'],
-      ['Neofetch', 'https://github.com/dylanaraps/neofetch', 'neofetch']
+      ['libnotify', 'https://gitlab.gnome.org/GNOME/libnotify', 'libnotify-bin']
     ]
   },
   win32: {
@@ -27,7 +25,6 @@ var data = {
     color: 'cyan',
     command: 'winget install',
     requirements: [
-      ['Neofetch', 'https://github.com/dylanaraps/neofetch', 'neofetch'],
       ['PowerShell', 'https://microsoft.com/powershell', 'powershell']
     ]
   }

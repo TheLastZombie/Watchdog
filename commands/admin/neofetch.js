@@ -7,7 +7,7 @@ module.exports = class NeofetchCommand extends commando.Command {
       aliases: ['archey', 'info', 'linuxlogo', 'screenfetch', 'system'],
       group: 'admin',
       memberName: 'neofetch',
-      description: 'Shows information about the host\'s system using Neofetch.',
+      description: 'Shows information about the host\'s system in a Neofetch-like format.',
       examples: [
         'neofetch'
       ],
@@ -22,16 +22,38 @@ module.exports = class NeofetchCommand extends commando.Command {
     const config = require('../../config')
     msg.react(config.reactions.progress)
 
-    const execFile = require('child_process').execFile
-    const execFileSync = require('child_process').execFileSync
+    const si = require('systeminformation')
 
-    execFile('neofetch', ['--stdout'], (error, stdout, stderr) => {
-      if (error) {
+    si.get({
+      users: 'user',
+      osInfo: 'hostname, distro, release, arch, kernel',
+      system: 'model, version',
+      time: 'uptime',
+      graphics: 'displays, controllers',
+      cpu: 'manufacturer, brand, cores, speedmax',
+      mem: 'total, used'
+    })
+      .then(data => {
+        const header = data.users[0].user + '@' + data.osInfo.hostname
+        const upHr = Math.floor(data.time.uptime / 3600)
+        const upMin = Math.floor(data.time.uptime / 60 - upHr * 60)
+
+        const output = header + '\n' +
+          '-'.repeat(header.length) + '\n' +
+          'OS: ' + data.osInfo.distro + ' ' + data.osInfo.release + ' ' + data.osInfo.arch + '\n' +
+          'Host: ' + data.system.model + ' ' + data.system.version + '\n' +
+          'Kernel: ' + data.osInfo.kernel + '\n' +
+          'Uptime: ' + upHr + ' hour(s), ' + upMin + ' min(s)' + '\n' +
+          'Resolution: ' + data.graphics.displays.map(x => x.resolutionx + 'x' + x.resolutiony).join(', ') + '\n' +
+          'CPU: ' + data.cpu.manufacturer + ' ' + data.cpu.brand + ' (' + data.cpu.cores + ') @ ' + data.cpu.speedmax + 'GHz' + '\n' +
+          'GPU: ' + data.graphics.controllers.map(x => x.vendor + ' ' + x.model).join(', ') + '\n' +
+          'Memory: ' + Math.floor(data.mem.used / 1024 / 1024) + 'MiB / ' + Math.floor(data.mem.total / 1024 / 1024) + 'MiB'
+
+        msg.reply('```' + output + '```').then(msg.react(config.reactions.success))
+      })
+      .catch(error => {
         msg.react(config.reactions.error)
         return msg.reply(error.toString())
-      }
-      msg.reply('```' + stdout + '```')
-      msg.react(config.reactions.success)
-    })
+      })
   }
 }
