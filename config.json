@@ -5,6 +5,10 @@
     "webcam": false,
     "screenshot": 10
   },
+  "limits": {
+    "processes": 10,
+    "services": 10
+  },
   "reactions": {
     "progress": "🔄",
     "success": "✅",
