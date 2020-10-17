@@ -35,7 +35,7 @@ module.exports = class TtsCommand extends commando.Command {
     say.speak(args.message, undefined, undefined, err => {
       if (err) {
         msg.react(config.reactions.error)
-        return msg.reply(err.toString())
+        return msg.channel.send(err.toString())
       }
       msg.react(config.reactions.success)
     })

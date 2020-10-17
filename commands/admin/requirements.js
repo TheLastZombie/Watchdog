@@ -28,9 +28,9 @@ module.exports = class RequirementsCommand extends commando.Command {
     execFile('npm', ['run', 'postinstall'], (error, stdout, stderr) => {
       if (error) {
         msg.react(config.reactions.error)
-        return msg.reply(error.toString())
+        return msg.channel.send(error.toString())
       }
-      msg.reply('```' + stdout.split('\n').slice(3).map(x => x.trim()).join('\n') + '```').then(msg.react(config.reactions.success))
+      msg.channel.send('```' + stdout.split('\n').slice(3).map(x => x.trim()).join('\n') + '```').then(msg.react(config.reactions.success))
     })
   }
 }

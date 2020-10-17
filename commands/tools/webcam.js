@@ -40,7 +40,7 @@ module.exports = class WebcamCommand extends commando.Command {
 
     NodeWebcam.list(list => {
       if (args.camera === 'list') {
-        return msg.reply(list
+        return msg.channel.send(list
           .map((x, i) => '**' + (i + 1) + '.** ' + x + '\n')
           .join('')
         ).then(msg.react(config.reactions.success))
@@ -55,20 +55,20 @@ module.exports = class WebcamCommand extends commando.Command {
       }, (err, data) => {
         if (err) {
           msg.react(config.reactions.error)
-          return msg.reply(err.toString())
+          return msg.channel.send(err.toString())
         }
 
         sharp(data)
           .blur(config.blur.webcam || 0.3)
           .toBuffer()
           .then(data => {
-            msg.reply({
+            msg.channel.send({
               files: [data]
             }).then(msg.react(config.reactions.success))
           })
           .catch(err => {
             msg.react(config.reactions.error)
-            return msg.reply(err.toString())
+            return msg.channel.send(err.toString())
           })
       })
     })

@@ -39,7 +39,7 @@ module.exports = class NotifyCommand extends commando.Command {
     }, (err, response) => {
       if (err) {
         msg.react(config.reactions.error)
-        return msg.reply(err.toString())
+        return msg.channel.send(err.toString())
       }
       msg.react(config.reactions.success)
     })

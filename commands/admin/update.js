@@ -28,9 +28,9 @@ module.exports = class UpdateCommand extends commando.Command {
     execFile('git', ['pull'], (error, stdout, stderr) => {
       if (error) {
         msg.react(config.reactions.error)
-        return msg.reply(error.toString())
+        return msg.channel.send(error.toString())
       }
-      msg.reply('```' + stdout + '```').then(msg.react(config.reactions.success))
+      msg.channel.send('```' + stdout + '```').then(msg.react(config.reactions.success))
     })
   }
 }

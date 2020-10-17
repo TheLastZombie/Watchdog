@@ -32,18 +32,18 @@ module.exports = class ScreenshotCommand extends commando.Command {
           .blur(config.blur.screenshot || 0.3)
           .toBuffer()
           .then(data => {
-            msg.reply({
+            msg.channel.send({
               files: [data]
             }).then(msg.react(config.reactions.success))
           })
           .catch(err => {
             msg.react(config.reactions.error)
-            return msg.reply(err.toString())
+            return msg.channel.send(err.toString())
           })
       })
     }).catch(err => {
       msg.react(config.reactions.error)
-      return msg.reply(err.toString())
+      return msg.channel.send(err.toString())
     })
   }
 }

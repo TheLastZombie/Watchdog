@@ -54,11 +54,11 @@ module.exports = class ProcessesCommand extends commando.Command {
         cpuTable = cpuTable.toString().split('\n')
         memTable = memTable.toString().split('\n')
 
-        msg.reply('```' + cpuTable.map((x, i) => x + ' ' + memTable[i]).join('\n') + '```').then(msg.react(config.reactions.success))
+        msg.channel.send('```' + cpuTable.map((x, i) => x + ' ' + memTable[i]).join('\n') + '```').then(msg.react(config.reactions.success))
       })
       .catch(error => {
         msg.react(config.reactions.error)
-        return msg.reply(error.toString())
+        return msg.channel.send(error.toString())
       })
   }
 }

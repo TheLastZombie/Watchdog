@@ -49,11 +49,11 @@ module.exports = class NeofetchCommand extends commando.Command {
           'GPU: ' + data.graphics.controllers.map(x => x.vendor + ' ' + x.model).join(', ') + '\n' +
           'Memory: ' + Math.floor(data.mem.used / 1024 / 1024) + 'MiB / ' + Math.floor(data.mem.total / 1024 / 1024) + 'MiB'
 
-        msg.reply('```' + output + '```').then(msg.react(config.reactions.success))
+        msg.channel.send('```' + output + '```').then(msg.react(config.reactions.success))
       })
       .catch(error => {
         msg.react(config.reactions.error)
-        return msg.reply(error.toString())
+        return msg.channel.send(error.toString())
       })
   }
 }
