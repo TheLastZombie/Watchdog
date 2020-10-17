@@ -9,6 +9,9 @@
     "processes": 10,
     "services": 10
   },
+  "folders": {
+    "download": "/home/eric/Desktop"
+  },
   "reactions": {
     "progress": "🔄",
     "success": "✅",
