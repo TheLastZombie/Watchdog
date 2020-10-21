@@ -23,7 +23,6 @@
   },
   "repository": "TheLastZombie/Watchdog",
   "scripts": {
-    "dist": "npx pkg .",
     "lint": "npx standard --fix",
     "postinstall": "node utilities/list-requirements.js",
     "start": "node ."
@@ -44,7 +43,6 @@
     "systeminformation": "^4.27.10"
   },
   "devDependencies": {
-    "pkg": "^4.4.9",
     "standard": "^14.3.4"
   }
 }
