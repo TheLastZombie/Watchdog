@@ -25,7 +25,18 @@ module.exports = class UpdateCommand extends commando.Command {
 
     const execFile = require('child_process').execFile
 
-    execFile('git', ['pull'], (error, stdout, stderr) => {
+    var cmd
+    var arg
+
+    if (process.platform === 'win32') {
+      cmd = 'cmd'
+      arg = ['/c', 'git', 'pull']
+    } else {
+      cmd = 'git'
+      arg = ['pull']
+    }
+
+    execFile(cmd, arg, (error, stdout, stderr) => {
       if (error) {
         msg.react(config.reactions.error)
         return msg.channel.send(error.toString())

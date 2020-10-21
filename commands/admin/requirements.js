@@ -25,7 +25,18 @@ module.exports = class RequirementsCommand extends commando.Command {
 
     const execFile = require('child_process').execFile
 
-    execFile('npm', ['run', 'postinstall'], (error, stdout, stderr) => {
+    var cmd
+    var arg
+
+    if (process.platform === 'win32') {
+      cmd = 'cmd'
+      arg = ['/c', 'npm', 'run', 'postinstall']
+    } else {
+      cmd = 'npm'
+      arg = ['run', 'postinstall']
+    }
+
+    execFile(cmd, arg, (error, stdout, stderr) => {
       if (error) {
         msg.react(config.reactions.error)
         return msg.channel.send(error.toString())
