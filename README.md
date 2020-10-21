@@ -27,6 +27,25 @@ To customize the bot to your liking, edit the `config.json` file and restart the
 npm start
 ```
 
+## Compatibility
+
+|              | Windows | Mac OS | GNU/Linux |
+| -----------: | :-----: | :----: | :-------: |
+| clipboard    | ✔️       | ❓      | ✔️         |
+| command      | ✔️       | ❓      | ✔️         |
+| download     | ✔️       | ❓      | ✔️         |
+| move         | ❓       | ❓      | ✔️         |
+| neofetch     | ✔️       | ❓      | ✔️         |
+| notify       | ✔️       | ❓      | ✔️         |
+| processes    | ✔️       | ❓      | ✔️         |
+| requirements | ✔️       | ❓      | ✔️         |
+| screenshot   | ✔️       | ❓      | ✔️         |
+| services     | ✔️       | ❓      | ✔️         |
+| tts          | ✔️       | ❓      | ✔️         |
+| type         | ✔️       | ❓      | ✔️         |
+| update       | ✔️       | ❓      | ✔️         |
+| webcam       | ❓       | ❓      | ✔️         |
+
 ## Alternatives
 
 - [M3IY0U/Stalkbot](https://github.com/M3IY0U/Stalkbot)
