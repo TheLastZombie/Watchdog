@@ -1,4 +1,5 @@
 const boxen = require('boxen')
+const version = require('../package').version
 
 var data = {
   darwin: {
@@ -32,7 +33,7 @@ var data = {
 
 data = data[process.platform]
 
-var prompt = 'Watchdog · ' +
+var prompt = 'Watchdog ' + version + ' · ' +
   data.name +
   ' (' +
   process.platform +
