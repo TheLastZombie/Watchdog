@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Compatibility table to README
 
+### Changed
+
+- Update dependencies
+
 ### Fixed
 
 - requirements command on Windows
