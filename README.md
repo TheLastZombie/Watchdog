@@ -34,20 +34,23 @@ npm start
 | clipboard    | ✔️       | ❓      | ✔️         |
 | command      | ✔️       | ❓      | ✔️         |
 | download     | ✔️       | ❓      | ✔️         |
-| move         | ❓       | ❓      | ✔️         |
+| move         | ✔️       | ❓      | ✔️         |
 | neofetch     | ✔️       | ❓      | ✔️         |
 | notify       | ✔️       | ❓      | ✔️         |
 | processes    | ✔️       | ❓      | ✔️         |
 | requirements | ✔️       | ❓      | ✔️         |
 | screenshot   | ✔️       | ❓      | ✔️         |
-| services     | ✔️       | ❓      | ✔️         |
+| services     | [❌][1]  | ❓      | ✔️         |
 | tts          | ✔️       | ❓      | ✔️         |
 | type         | ✔️       | ❓      | ✔️         |
 | update       | ✔️       | ❓      | ✔️         |
-| webcam       | ❓       | ❓      | ✔️         |
+| webcam       | [❌][2]  | ❓      | ✔️         |
 
 ## Alternatives
 
 - [M3IY0U/Stalkbot](https://github.com/M3IY0U/Stalkbot)
 - [Jerrynicki/Stalkbot](https://github.com/Jerrynicki/Stalkbot)
 - [Jerrynicki/Stalkbot-Rewrite](https://gitlab.com/Jerrynicki/stalkbot-rewrite)
+
+[1]: https://github.com/sebhildebrandt/systeminformation/blob/master/lib/processes.js#L260-L320
+[2]: https://github.com/chuckfairy/node-webcam/issues/28
