@@ -31,26 +31,23 @@ npm start
 
 |              | Windows | Mac OS | GNU/Linux |
 | -----------: | :-----: | :----: | :-------: |
-| clipboard    | ✔️       | ❓      | ✔️         |
-| command      | ✔️       | ❓      | ✔️         |
-| download     | ✔️       | ❓      | ✔️         |
-| move         | ✔️       | ❓      | ✔️         |
-| neofetch     | ✔️       | ❓      | ✔️         |
-| notify       | ✔️       | ❓      | ✔️         |
-| processes    | ✔️       | ❓      | ✔️         |
-| requirements | ✔️       | ❓      | ✔️         |
+| clipboard    | ✔️       | ✔️      | ✔️         |
+| command      | ✔️       | ✔️      | ✔️         |
+| download     | ✔️       | ✔️      | ✔️         |
+| move         | ✔️       | ✔️      | ✔️         |
+| neofetch     | ✔️       | ✔️      | ✔️         |
+| notify       | ✔️       | ✔️      | ✔️         |
+| processes    | ✔️       | ✔️      | ✔️         |
+| requirements | ✔️       | ✔️      | ✔️         |
 | screenshot   | ✔️       | ❓      | ✔️         |
-| services     | [❌][1]  | ❓      | ✔️         |
+| services     | ❌       | ❓      | ✔️         |
 | tts          | ✔️       | ❓      | ✔️         |
-| type         | ✔️       | ❓      | ✔️         |
-| update       | ✔️       | ❓      | ✔️         |
-| webcam       | [❌][2]  | ❓      | ✔️         |
+| type         | ✔️       | ✔️      | ✔️         |
+| update       | ✔️       | ✔️      | ✔️         |
+| webcam       | ❌       | ❓      | ✔️         |
 
 ## Alternatives
 
 - [M3IY0U/Stalkbot](https://github.com/M3IY0U/Stalkbot)
 - [Jerrynicki/Stalkbot](https://github.com/Jerrynicki/Stalkbot)
 - [Jerrynicki/Stalkbot-Rewrite](https://gitlab.com/Jerrynicki/stalkbot-rewrite)
-
-[1]: https://github.com/sebhildebrandt/systeminformation/blob/master/lib/processes.js#L260-L320
-[2]: https://github.com/chuckfairy/node-webcam/issues/28
