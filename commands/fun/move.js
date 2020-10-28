@@ -4,7 +4,7 @@ module.exports = class MoveCommand extends commando.Command {
   constructor (client) {
     super(client, {
       name: 'move',
-      aliases: ['mouse'],
+      aliases: ['cursor', 'mouse'],
       group: 'fun',
       memberName: 'move',
       description: 'Moves the mouse to the specified X/Y pixel coordinates.',

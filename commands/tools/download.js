@@ -35,6 +35,7 @@ module.exports = class DownloadCommand extends commando.Command {
     msg.react(config.reactions.progress)
 
     const fs = require('fs')
+    const read = require('fs-readdir-recursive')
     const path = require('path')
 
     if (!fs.existsSync(config.folders.download)) {
@@ -42,9 +43,15 @@ module.exports = class DownloadCommand extends commando.Command {
       return msg.channel.send('Directory `' + config.folders.download + '` does not exist!')
     }
 
-    var files = fs.readdirSync(config.folders.download, {
-      withFileTypes: true
-    }).filter(x => x.isFile()).map(x => x.name)
+    var files
+    if (config.folders.recursive) {
+      files = read(config.folders.download)
+    } else {
+      files = fs.readdirSync(config.folders.download, {
+        withFileTypes: true
+      }).filter(x => x.isFile()).map(x => x.name)
+    }
+
     if (!files.length) {
       msg.react(config.reactions.error)
       return msg.channel.send('Error: Directory `' + config.folders.download + '` did not contain any files!')

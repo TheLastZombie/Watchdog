@@ -7,7 +7,7 @@ module.exports = class TypeCommand extends commando.Command {
       aliases: ['enter', 'input', 'keyboard'],
       group: 'fun',
       memberName: 'type',
-      description: 'Enters specitied text into whatever program is focused right now.',
+      description: 'Enters specified text into whatever program is focused right now.',
       examples: [
         'type',
         'type Hello!'

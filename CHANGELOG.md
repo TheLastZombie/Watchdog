@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
+- Option to recurse directories with download
+- cursor alias to move
 - Compatibility table to README
 
 ### Changed
@@ -19,6 +21,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - requirements command on Windows
 - screenshot command on Windows
 - update command on Windows
+- Typing error in type command description
 
 ### Removed
 
