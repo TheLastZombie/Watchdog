@@ -31,15 +31,15 @@ module.exports = class ScreenshotCommand extends commando.Command {
         imgs = imgs.map((x, i) => {
           return {
             input: x,
-            top: displays[i].offsetY || displays[i].top,
-            left: displays[i].offsetX || displays[i].left
+            top: displays[i].offsetY || displays[i].top || 0,
+            left: displays[i].offsetX || displays[i].left || 0
           }
         })
 
         sharp({
           create: {
-            width: Math.max(...displays.map(x => x.width + (x.offsetX || x.left))),
-            height: Math.max(...displays.map(x => x.height + (x.offsetY || x.top))),
+            width: Math.max(...displays.map(x => x.width + (x.offsetX || x.left || 0))),
+            height: Math.max(...displays.map(x => x.height + (x.offsetY || x.top || 0))),
             channels: 4,
             background: { r: 0, g: 0, b: 0, alpha: 0 }
           }
