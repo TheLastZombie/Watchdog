@@ -40,9 +40,9 @@
     "screenshot-desktop": "^1.12.2",
     "sharp": "^0.26.2",
     "sqlite": "^2.9.3",
-    "systeminformation": "^4.27.10"
+    "systeminformation": "^4.27.11"
   },
   "devDependencies": {
-    "standard": "^15.0.0"
+    "standard": "^15.0.1"
   }
 }
