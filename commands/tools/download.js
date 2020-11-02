@@ -43,7 +43,7 @@ module.exports = class DownloadCommand extends commando.Command {
       return msg.channel.send('Directory `' + config.folders.download + '` does not exist!')
     }
 
-    var files
+    let files
     if (config.folders.recursive) {
       files = read(config.folders.download)
     } else {

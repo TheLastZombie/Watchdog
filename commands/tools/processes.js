@@ -27,7 +27,7 @@ module.exports = class ProcessesCommand extends commando.Command {
 
     si.processes()
       .then(data => {
-        var cpuTable = new Table({
+        let cpuTable = new Table({
           style: { head: [], border: [] }
         })
         cpuTable.push(
@@ -39,7 +39,7 @@ module.exports = class ProcessesCommand extends commando.Command {
             .map(x => [x.name, (x.pcpu).toFixed(2) + ' %'])
         )
 
-        var memTable = new Table({
+        let memTable = new Table({
           style: { head: [], border: [] }
         })
         memTable.push(

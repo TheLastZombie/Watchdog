@@ -25,8 +25,8 @@ module.exports = class RequirementsCommand extends commando.Command {
 
     const execFile = require('child_process').execFile
 
-    var cmd
-    var arg
+    let cmd
+    let arg
 
     if (process.platform === 'win32') {
       cmd = 'cmd'
