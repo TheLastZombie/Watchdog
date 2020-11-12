@@ -25,7 +25,16 @@ module.exports = class ServicesCommand extends commando.Command {
     const Table = require('cli-table3')
 
     si.services('*')
-      .then(data => {
+      .then(async data => {
+        if (process.platform === 'win32') {
+          const processes = await si.processes()
+          data.forEach(x => {
+            if (x.pids[0] === '0') return data.filter(y => y !== x)
+            x.pcpu = processes.list.filter(y => y.pid === Number(x.pids[0]))[0].pcpu
+            x.pmem = processes.list.filter(y => y.pid === Number(x.pids[0]))[0].pmem
+          })
+        }
+
         let cpuTable = new Table({
           style: { head: [], border: [] }
         })

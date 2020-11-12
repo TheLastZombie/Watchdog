@@ -40,7 +40,7 @@ npm start
 | processes    | ✔️       | ✔️      | ✔️         |
 | requirements | ✔️       | ✔️      | ✔️         |
 | screenshot   | ✔️       | ❓      | ✔️         |
-| services     | ❌       | ❓      | ✔️         |
+| services     | ✔️       | ❓      | ✔️         |
 | tts          | ✔️       | ❓      | ✔️         |
 | type         | ✔️       | ✔️      | ✔️         |
 | update       | ✔️       | ✔️      | ✔️         |

@@ -20,6 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - requirements command on Windows
 - screenshot command on Windows
+- services command on Windows
 - update command on Windows
 - Typing error in type command description
 
