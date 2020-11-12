@@ -6,7 +6,7 @@ module.exports = class ServicesCommand extends commando.Command {
       name: 'services',
       group: 'tools',
       memberName: 'services',
-      description: 'Shows the most resource-intensive services (sorted by CPU and RAM).help',
+      description: 'Shows the most resource-intensive services (sorted by CPU and RAM).',
       examples: [
         'services'
       ],
