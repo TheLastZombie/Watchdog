@@ -18,9 +18,6 @@
   "license": "MIT",
   "author": "TheLastZombie",
   "main": "index.js",
-  "bin": {
-    "watchdog": "index.js"
-  },
   "repository": "TheLastZombie/Watchdog",
   "scripts": {
     "lint": "npx standard --fix",
