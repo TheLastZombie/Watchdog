@@ -44,7 +44,7 @@ npm start
 | tts          | ✔️       | ❓      | ✔️         |
 | type         | ✔️       | ✔️      | ✔️         |
 | update       | ✔️       | ✔️      | ✔️         |
-| webcam       | ❌       | ❓      | ✔️         |
+| webcam       | ✔️       | ❓      | ✔️         |
 
 ## Alternatives
 

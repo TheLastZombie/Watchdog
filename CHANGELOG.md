@@ -22,6 +22,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - screenshot command on Windows
 - services command on Windows
 - update command on Windows
+- webcam command on Windows
 - Typing error in services command description
 - Typing error in type command description
 

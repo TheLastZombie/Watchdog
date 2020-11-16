@@ -36,6 +36,7 @@ module.exports = class WebcamCommand extends commando.Command {
     msg.react(config.reactions.progress)
 
     const NodeWebcam = require('node-webcam')
+    const Jimp = require('jimp')
     const sharp = require('sharp')
 
     NodeWebcam.list(list => {
@@ -52,10 +53,15 @@ module.exports = class WebcamCommand extends commando.Command {
       NodeWebcam.capture('output/webcam', {
         device: cName === -1 ? cId : cName,
         callbackReturn: 'buffer'
-      }, (err, data) => {
+      }, async (err, data) => {
         if (err) {
           msg.react(config.reactions.error)
           return msg.channel.send(err.toString())
+        }
+
+        if (process.platform === 'win32') {
+          data = await Jimp.read(data)
+          data = await data.getBufferAsync(Jimp.MIME_JPEG)
         }
 
         sharp(data)
