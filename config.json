@@ -10,7 +10,8 @@
     "services": 10
   },
   "folders": {
-    "download": "/home/user/Desktop"
+    "download": "/home/user/Desktop",
+    "recursive": false
   },
   "reactions": {
     "progress": "🔄",
