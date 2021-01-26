@@ -30,7 +30,7 @@ module.exports = class NeofetchCommand extends commando.Command {
       system: 'model, version',
       time: 'uptime',
       graphics: 'displays, controllers',
-      cpu: 'manufacturer, brand, cores, speedmax',
+      cpu: 'manufacturer, brand, cores, speedMax',
       mem: 'total, used'
     })
       .then(data => {
@@ -44,8 +44,8 @@ module.exports = class NeofetchCommand extends commando.Command {
           'Host: ' + data.system.model + ' ' + data.system.version + '\n' +
           'Kernel: ' + data.osInfo.kernel + '\n' +
           'Uptime: ' + upHr + ' hour(s), ' + upMin + ' min(s)' + '\n' +
-          'Resolution: ' + data.graphics.displays.map(x => x.resolutionx + 'x' + x.resolutiony).join(', ') + '\n' +
-          'CPU: ' + data.cpu.manufacturer + ' ' + data.cpu.brand + ' (' + data.cpu.cores + ') @ ' + data.cpu.speedmax + 'GHz' + '\n' +
+          'Resolution: ' + data.graphics.displays.map(x => x.resolutionX + 'x' + x.resolutionY).join(', ') + '\n' +
+          'CPU: ' + data.cpu.manufacturer + ' ' + data.cpu.brand + ' (' + data.cpu.cores + ') @ ' + data.cpu.speedMax + 'GHz' + '\n' +
           'GPU: ' + data.graphics.controllers.map(x => x.vendor + ' ' + x.model).join(', ') + '\n' +
           'Memory: ' + Math.floor(data.mem.used / 1024 / 1024) + 'MiB / ' + Math.floor(data.mem.total / 1024 / 1024) + 'MiB'
 
