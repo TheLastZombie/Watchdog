@@ -31,11 +31,13 @@ npm start
 
 |              | Windows | Mac OS | GNU/Linux |
 | -----------: | :-----: | :----: | :-------: |
+| activity     | ✔️       | ✔️      | ✔️         |
 | clipboard    | ✔️       | ✔️      | ✔️         |
 | command      | ✔️       | ✔️      | ✔️         |
 | download     | ✔️       | ✔️      | ✔️         |
 | move         | ✔️       | ✔️      | ✔️         |
 | neofetch     | ✔️       | ✔️      | ✔️         |
+| nickname     | ✔️       | ✔️      | ✔️         |
 | notify       | ✔️       | ✔️      | ✔️         |
 | processes    | ✔️       | ✔️      | ✔️         |
 | requirements | ✔️       | ✔️      | ✔️         |
@@ -43,7 +45,9 @@ npm start
 | services     | ✔️       | ❓      | ✔️         |
 | tts          | ✔️       | ❓      | ✔️         |
 | type         | ✔️       | ✔️      | ✔️         |
+| undo         | ✔️       | ✔️      | ✔️         |
 | update       | ✔️       | ✔️      | ✔️         |
+| username     | ✔️       | ✔️      | ✔️         |
 | webcam       | ✔️       | ❓      | ✔️         |
 
 ## Alternatives
