@@ -25,6 +25,7 @@
     "start": "node ."
   },
   "dependencies": {
+    "better-sqlite3": "^7.1.2",
     "boxen": "^5.0.0",
     "cli-table3": "^0.6.0",
     "clipboardy": "^2.3.0",

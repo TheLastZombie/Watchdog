@@ -28,3 +28,12 @@ client.setProvider(
 if (!fs.existsSync('output')) fs.mkdirSync('output')
 
 client.login(config.token)
+
+client.on('message', msg => {
+  if (msg.author.id !== client.user.id) return
+
+  const db = require('better-sqlite3')(path.join(__dirname, 'settings.sqlite3'))
+  db.prepare('CREATE TABLE IF NOT EXISTS messages (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, channel INTEGER, message INTEGER)').run()
+  db.prepare('INSERT INTO messages (channel, message) VALUES (?, ?)').run(msg.channel.id, msg.id)
+  db.close()
+})
