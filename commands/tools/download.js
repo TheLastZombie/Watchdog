@@ -69,7 +69,7 @@ module.exports = class DownloadCommand extends commando.Command {
       return msg.channel.send('Error: Chosen file `' + path.basename(files) + '` with ' + fs.statSync(files).size / 1000000 + ' MB was over Discord limit (8 MB)!')
     }
 
-    msg.channel.send({
+    msg.channel.send(path.basename(files), {
       files: [files]
     }).then(msg.react(config.reactions.success))
   }
