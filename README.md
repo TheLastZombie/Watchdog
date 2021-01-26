@@ -49,5 +49,6 @@ npm start
 ## Alternatives
 
 - [M3IY0U/Stalkbot](https://github.com/M3IY0U/Stalkbot)
+- [M3IY0U/StalkbotGUI](https://github.com/M3IY0U/StalkbotGUI)
 - [Jerrynicki/Stalkbot](https://github.com/Jerrynicki/Stalkbot)
 - [Jerrynicki/Stalkbot-Rewrite](https://gitlab.com/Jerrynicki/stalkbot-rewrite)

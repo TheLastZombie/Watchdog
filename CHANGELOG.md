@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Option to recurse directories with `download`
 - `cursor` alias to `move`
 - Compatibility table to README
+- M3IY0U/StalkbotGUI to alternatives
 
 ### Changed
 
