@@ -1,15 +1,15 @@
 const commando = require('discord.js-commando')
 
-module.exports = class StatusCommand extends commando.Command {
+module.exports = class ActivityCommand extends commando.Command {
   constructor (client) {
     super(client, {
-      name: 'status',
-      aliases: ['activity'],
+      name: 'activity',
+      aliases: ['status'],
       group: 'admin',
-      memberName: 'status',
+      memberName: 'activity',
       description: 'Sets the bot\'s Discord activity.',
       examples: [
-        'status WATCHING my owner.'
+        'activity WATCHING my owner.'
       ],
       ownerOnly: true,
       clientPermissions: [
