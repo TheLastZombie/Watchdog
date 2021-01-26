@@ -5,7 +5,7 @@ module.exports = class UsernameCommand extends commando.Command {
     super(client, {
       name: 'username',
       aliases: ['name'],
-      group: 'admin',
+      group: 'meta',
       memberName: 'username',
       description: 'Sets the bot\'s Discord username.',
       examples: [

@@ -5,7 +5,7 @@ module.exports = class ActivityCommand extends commando.Command {
     super(client, {
       name: 'activity',
       aliases: ['status'],
-      group: 'admin',
+      group: 'meta',
       memberName: 'activity',
       description: 'Sets the bot\'s Discord activity.',
       examples: [

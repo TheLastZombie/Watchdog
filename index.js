@@ -15,7 +15,8 @@ client.registry
   .registerGroups([
     ['fun', 'Fun commands'],
     ['tools', 'Tools and utilities'],
-    ['admin', 'Administrative commands']
+    ['admin', 'Administrative commands'],
+    ['meta', 'Discord metadata']
   ])
   .registerDefaults()
   .registerCommandsIn(path.resolve(__dirname, 'commands'))
