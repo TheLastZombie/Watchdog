@@ -43,7 +43,7 @@ npm start
 | requirements | ✔️       | ✔️      | ✔️         |
 | screenshot   | ✔️       | ❓      | ✔️         |
 | services     | ✔️       | ❓      | ✔️         |
-| tts          | ✔️       | ❓      | ✔️         |
+| tts          | ✔️       | ✔️      | ✔️         |
 | type         | ✔️       | ✔️      | ✔️         |
 | undo         | ✔️       | ✔️      | ✔️         |
 | upload       | ✔️       | ✔️      | ✔️         |
