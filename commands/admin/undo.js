@@ -30,7 +30,7 @@ module.exports = class UndoCommand extends commando.Command {
     db.prepare('DELETE FROM messages WHERE channel = ? ORDER BY id DESC LIMIT 1').run(msg.channel.id)
     db.close()
 
-    console.log('[Undo] Deleting message ' + row.messagee + ' in channel ' + msg.channel.id)
+    console.log('[Undo] Deleting message ' + row.message + ' in channel ' + msg.channel.id)
 
     msg.channel.fetchMessage(row.message)
       .then(message => message.delete()
