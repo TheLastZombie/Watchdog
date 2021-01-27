@@ -38,6 +38,8 @@ module.exports = class MoveCommand extends commando.Command {
 
     const robot = require('robotjs')
 
+    console.log('[Move] Moving cursor to X: ' + args.posX, ', Y: ' + args.posY)
+
     robot.moveMouse(args.posX, args.posY)
     msg.react(config.reactions.success)
   }

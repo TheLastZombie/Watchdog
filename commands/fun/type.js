@@ -32,6 +32,8 @@ module.exports = class TypeCommand extends commando.Command {
 
     const robot = require('robotjs')
 
+    console.log('[Type] Emulating keystrokes: ' + args.message.replace(/\n.*/, '...'))
+
     robot.typeString(args.message)
     msg.react(config.reactions.success)
   }

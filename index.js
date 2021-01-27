@@ -29,6 +29,10 @@ if (!fs.existsSync('output')) fs.mkdirSync('output')
 
 client.login(config.token)
 
+client.on('ready', () => {
+  console.log('[Watchdog] Successfully logged in as ' + client.user.tag)
+})
+
 client.on('message', msg => {
   if (msg.author.id !== client.user.id) return
 
@@ -36,4 +40,12 @@ client.on('message', msg => {
   db.prepare('CREATE TABLE IF NOT EXISTS messages (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, channel INTEGER, message INTEGER)').run()
   db.prepare('INSERT INTO messages (channel, message) VALUES (?, ?)').run(msg.channel.id, msg.id)
   db.close()
+})
+
+client.on('commandRun', (cmd, res, msg) => {
+  if (msg.guild) {
+    console.log('[Watchdog] ' + cmd.name + ' executed by ' + msg.author.tag + ' in ' + msg.guild.name + ' / ' + msg.channel.name)
+  } else {
+    console.log('[Watchdog] ' + cmd.name + ' executed by ' + msg.author.tag + ' via direct message')
+  }
 })

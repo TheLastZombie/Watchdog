@@ -32,6 +32,8 @@ module.exports = class TtsCommand extends commando.Command {
 
     const say = require('say')
 
+    console.log('[Tts] Reading message: ' + args.message.replace(/\n.*/, '...'))
+
     say.speak(args.message, undefined, undefined, err => {
       if (err) {
         msg.react(config.reactions.error)

@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - `username` command
 - Option to recurse directories with `download`
 - `cursor` alias to `move`
+- Log output to main thread and most commands
 - Compatibility table to README
 - M3IY0U/StalkbotGUI to alternatives
 

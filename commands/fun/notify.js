@@ -32,6 +32,8 @@ module.exports = class NotifyCommand extends commando.Command {
 
     const notifier = require('node-notifier')
 
+    console.log('[Notify] Creating notification with content: ' + args.message.replace(/\n.*/, '...'))
+
     notifier.notify({
       title: msg.author.tag + ' via Watchdog',
       message: args.message,

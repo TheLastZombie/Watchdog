@@ -38,7 +38,11 @@ module.exports = class DownloadCommand extends commando.Command {
     const read = require('fs-readdir-recursive')
     const path = require('path')
 
+    console.log('[Download] Search string given: ' + args.search.replace(/\n.*/, '...'))
+
     if (!fs.existsSync(config.folders.download)) {
+      console.log('[Download] Didn\'t send anything because download directory doesn\'t exist')
+
       msg.react(config.reactions.error)
       return msg.channel.send('Directory `' + config.folders.download + '` does not exist!')
     }
@@ -53,21 +57,29 @@ module.exports = class DownloadCommand extends commando.Command {
     }
 
     if (!files.length) {
+      console.log('[Download] Didn\'t send anything because download directory was empty')
+
       msg.react(config.reactions.error)
       return msg.channel.send('Error: Directory `' + config.folders.download + '` did not contain any files!')
     }
 
     if (args.search) files = files.filter(x => x.toLowerCase().includes(args.search.toLowerCase()))
     if (!files.length) {
+      console.log('[Download] Didn\'t send anything because no files matched the given search')
+
       msg.react(config.reactions.error)
       return msg.channel.send('Error: Your search for `' + args.search.replace(/`/g, '﻿`') + '` did not yield any results!')
     }
 
     files = path.resolve(config.folders.download, files[Math.floor(Math.random() * files.length)])
     if (fs.statSync(files).size > 8000000) {
+      console.log('[Download] Didn\'t send ' + path.basename(files) + ' because file was over Discord size limit')
+
       msg.react(config.reactions.error)
       return msg.channel.send('Error: Chosen file `' + path.basename(files) + '` with ' + fs.statSync(files).size / 1000000 + ' MB was over Discord limit (8 MB)!')
     }
+
+    console.log('[Download] Sending file ' + path.basename(files))
 
     msg.channel.send(path.basename(files), {
       files: [files]

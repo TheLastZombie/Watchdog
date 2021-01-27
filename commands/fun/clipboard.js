@@ -35,9 +35,13 @@ module.exports = class ClipboardCommand extends commando.Command {
     const clipboardy = require('clipboardy')
 
     if (args.message) {
+      console.log('[Clipboard] Setting clipboard to content: ' + args.message.replace(/\n.*/, '...'))
+
       clipboardy.writeSync(args.message)
       msg.react(config.reactions.success)
     } else {
+      console.log('[Clipboard] Sending current content: ' + clipboardy.readSync().replace(/\n.*/, '...'))
+
       msg.channel.send('```' + clipboardy.readSync().replace(/`/g, '﻿`') + '```').then(msg.react(config.reactions.success))
     }
   }

@@ -25,6 +25,8 @@ module.exports = class RequirementsCommand extends commando.Command {
 
     const execFile = require('child_process').execFile
 
+    console.log('[Requirements] Retrieving requirements for ' + process.platform + ' installation')
+
     let cmd
     let arg
 

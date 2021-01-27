@@ -22,7 +22,7 @@
   "scripts": {
     "lint": "npx standard --fix",
     "postinstall": "node utilities/list-requirements.js",
-    "start": "node ."
+    "start": "node --no-warnings ."
   },
   "dependencies": {
     "axios": "^0.21.1",

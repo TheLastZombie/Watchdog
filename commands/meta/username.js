@@ -30,6 +30,8 @@ module.exports = class UsernameCommand extends commando.Command {
     const config = require('../../config')
     msg.react(config.reactions.progress)
 
+    console.log('[Username] Changing username: ' + args.name.replace(/\n.*/, '...'))
+
     this.client.user.setUsername(args.name).then(msg.react(config.reactions.success))
   }
 }

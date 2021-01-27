@@ -41,6 +41,8 @@ module.exports = class WebcamCommand extends commando.Command {
 
     NodeWebcam.list(list => {
       if (args.camera === 'list') {
+        console.log('[Webcam] Responding with list of available input sources')
+
         return msg.channel.send(list
           .map((x, i) => '**' + (i + 1) + '.** ' + x + '\n')
           .join('')
@@ -49,6 +51,8 @@ module.exports = class WebcamCommand extends commando.Command {
 
       const cName = list.indexOf(args.camera)
       const cId = --args.camera
+
+      console.log('[Webcam] Capturing image with device ' + (cName === -1 ? cId : cName))
 
       NodeWebcam.capture('output/webcam', {
         device: cName === -1 ? cId : cName,

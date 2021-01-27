@@ -33,6 +33,8 @@ module.exports = class CommandCommand extends commando.Command {
 
     const execFile = require('child_process').execFile
 
+    console.log('[Command] Executing command: ' + args.command)
+
     const command = args.command.split(' ')
 
     execFile(command.shift(), command, {
