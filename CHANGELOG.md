@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - `undo` command
 - `upload` command
 - `username` command
+- `webcamgif` command
 - Option to recurse directories with `download`
 - `cursor` alias to `move`
 - Log output to main thread and most commands

@@ -50,6 +50,7 @@ npm start
 | update       | ✔️       | ✔️      | ✔️         |
 | username     | ✔️       | ✔️      | ✔️         |
 | webcam       | ✔️       | ❓      | ✔️         |
+| webcamgif    | ❓       | ❓      | ✔️         |
 
 ## Alternatives
 
