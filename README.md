@@ -39,11 +39,11 @@ npm start
 | neofetch     | ✔️       | ✔️      | ✔️         |
 | nickname     | ✔️       | ✔️      | ✔️         |
 | notify       | ✔️       | ✔️      | ✔️         |
-| processes    | ✔️       | ✔️      | ✔️         |
+| processes    | ✔️       | ❌      | ✔️         |
 | requirements | ✔️       | ✔️      | ✔️         |
-| screenshot   | ✔️       | ❓      | ✔️         |
-| services     | ✔️       | ❓      | ✔️         |
-| tts          | ✔️       | ❓      | ✔️         |
+| screenshot   | ✔️       | ❌      | ✔️         |
+| services     | ✔️       | ❌      | ✔️         |
+| tts          | ✔️       | ✔️      | ✔️         |
 | type         | ✔️       | ✔️      | ✔️         |
 | undo         | ✔️       | ✔️      | ✔️         |
 | upload       | ✔️       | ✔️      | ✔️         |
