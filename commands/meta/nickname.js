@@ -11,6 +11,7 @@ module.exports = class NicknameCommand extends commando.Command {
       examples: [
         'nickname [!] Watchdog'
       ],
+      guildOnly: true,
       ownerOnly: true,
       clientPermissions: [
         'ADD_REACTIONS',
@@ -31,13 +32,6 @@ module.exports = class NicknameCommand extends commando.Command {
   async run (msg, args) {
     const config = require('../../config')
     msg.react(config.reactions.progress)
-
-    if (!msg.guild) {
-      console.log('[Nickname] Cancelled because command was run outside of a guild')
-
-      msg.react(config.reactions.error)
-      return msg.channel.send('This command can only be used in guilds!')
-    }
 
     console.log('[Nickname] Changing nickname: ' + args.name.replace(/\n.*/, '...'))
 
