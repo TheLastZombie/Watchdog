@@ -21,6 +21,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - Send file name when using `download`
+- Update homepage URL in package.json
 - Include `output` directory in Git repository
 - Update dependencies
 
