@@ -23,7 +23,7 @@ module.exports = class WebcamgifCommand extends commando.Command {
           label: 'Duration',
           prompt: 'How long do you want the recording to be? Please specify a duration in ms (15000 maximum).',
           type: 'integer',
-          validate: (x) => x < 15000,
+          validate: (x) => x < 15000 && x > 0,
           default: require('../../config').limits.webcamgif
         }
       ]
@@ -35,23 +35,28 @@ module.exports = class WebcamgifCommand extends commando.Command {
     msg.react(config.reactions.progress)
 
     const { VideoCapture } = require('camera-capture')
+    const getPort = require('get-port')
     const fs = require('fs')
 
-    console.log('[Webcamgif] Capturing ' + args.duration + ' ms long video with default device')
+    getPort().then(port => {
+      console.log('[Webcamgif] Capturing ' + args.duration + ' ms long video via port ' + port)
 
-    const c = new VideoCapture({
-      port: 2347
-    })
-    c.initialize().then(() => {
-      c.startRecording().then(() => {
-        setTimeout(() => {
-          c.stopRecording().then(data => {
-            fs.writeFileSync('output/webcamgif.webm', data)
-            msg.channel.send({
-              files: ['output/webcamgif.webm']
-            }).then(msg.react(config.reactions.success))
-          })
-        }, args.duration)
+      const c = new VideoCapture({
+        port: port
+      })
+      c.initialize().then(() => {
+        c.startRecording().then(() => {
+          setTimeout(() => {
+            c.stopRecording().then(data => {
+              fs.writeFileSync('output/webcamgif.webm', data)
+              msg.channel.send({
+                files: ['output/webcamgif.webm']
+              }).then(msg.react(config.reactions.success))
+            })
+          }, args.duration)
+        })
+      }).catch(error => {
+        if (error.toString().startsWith('Error: Evaluation failed: DOMException: ')) msg.react(config.reactions.error)
       })
     })
   }
