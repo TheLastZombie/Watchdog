@@ -38,7 +38,7 @@ module.exports = class DownloadCommand extends commando.Command {
     const read = require('fs-readdir-recursive')
     const path = require('path')
 
-    console.log('[Download] Search string given: ' + args.search.replace(/\n.*/, '...'))
+    if (args.search) console.log('[Download] Search string given: ' + args.search.replace(/\n.*/, '...'))
 
     if (!fs.existsSync(config.folders.download)) {
       console.log('[Download] Didn\'t send anything because download directory doesn\'t exist')
