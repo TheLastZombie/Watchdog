@@ -46,6 +46,7 @@ npm start
 | tts          | ✔️       | ❓      | ✔️         |
 | type         | ✔️       | ✔️      | ✔️         |
 | undo         | ✔️       | ✔️      | ✔️         |
+| upload       | ✔️       | ✔️      | ✔️         |
 | update       | ✔️       | ✔️      | ✔️         |
 | username     | ✔️       | ✔️      | ✔️         |
 | webcam       | ✔️       | ❓      | ✔️         |

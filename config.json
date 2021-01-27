@@ -11,6 +11,7 @@
   },
   "folders": {
     "download": "/home/user/Desktop",
+    "upload": "/home/user/Downloads",
     "recursive": false
   },
   "reactions": {

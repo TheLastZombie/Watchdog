@@ -25,6 +25,7 @@
     "start": "node ."
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "better-sqlite3": "^7.1.2",
     "boxen": "^5.0.0",
     "cli-table3": "^0.6.0",

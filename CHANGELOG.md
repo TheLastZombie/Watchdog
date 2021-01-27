@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - `activity` command
 - `nickname` command
 - `undo` command
+- `upload` command
 - `username` command
 - Option to recurse directories with `download`
 - `cursor` alias to `move`
