@@ -49,6 +49,7 @@ module.exports = class WebcamgifCommand extends commando.Command {
           setTimeout(() => {
             c.stopRecording().then(data => {
               fs.writeFileSync('output/webcamgif.webm', data)
+              c.stop()
               msg.channel.send({
                 files: ['output/webcamgif.webm']
               }).then(msg.react(config.reactions.success))
