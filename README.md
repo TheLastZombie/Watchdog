@@ -51,6 +51,7 @@ npm start
 | username     | ✔️       | ✔️      | ✔️         |
 | webcam       | ✔️       | ❓      | ✔️         |
 | webcamgif    | ❓       | ❓      | ✔️         |
+| webcamwebm   | ❓       | ❓      | ✔️         |
 
 ## Alternatives
 

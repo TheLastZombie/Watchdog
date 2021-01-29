@@ -1,16 +1,16 @@
 const commando = require('discord.js-commando')
 
-module.exports = class WebcamgifCommand extends commando.Command {
+module.exports = class WebcamwebmCommand extends commando.Command {
   constructor (client) {
     super(client, {
-      name: 'webcamgif',
-      aliases: ['camgif', 'cameragif', 'gif', 'wcg', 'wcgif'],
+      name: 'webcamwebm',
+      aliases: ['camwebm', 'camerawebm', 'webm', 'wcw', 'wcwebm'],
       group: 'tools',
-      memberName: 'webcamgif',
-      description: 'Records a GIF using the default camera for the specified length.',
+      memberName: 'webcamwebm',
+      description: 'Records a video using the default camera for the specified length.',
       examples: [
-        'webcamgif',
-        'webcamgif 2500'
+        'webcamwebm',
+        'webcamwebm 2500'
       ],
       clientPermissions: [
         'ADD_REACTIONS',
@@ -37,11 +37,9 @@ module.exports = class WebcamgifCommand extends commando.Command {
     const { VideoCapture } = require('camera-capture')
     const getPort = require('get-port')
     const fs = require('fs')
-    const childProcess = require('child_process')
-    const pathToFfmpeg = require('ffmpeg-static')
 
     getPort().then(port => {
-      console.log('[Webcamgif] Capturing ' + args.duration + ' ms long GIF via port ' + port)
+      console.log('[Webcamwebm] Capturing ' + args.duration + ' ms long video via port ' + port)
 
       const c = new VideoCapture({
         port: port
@@ -50,16 +48,10 @@ module.exports = class WebcamgifCommand extends commando.Command {
         c.startRecording().then(() => {
           setTimeout(() => {
             c.stopRecording().then(data => {
-              fs.writeFileSync('output/webcamgif.webm', data)
+              fs.writeFileSync('output/webcamwebm.webm', data)
               c.stop()
-              childProcess.execFileSync(pathToFfmpeg, [
-                '-y',
-                '-i',
-                'output/webcamgif.webm',
-                'output/webcamgif.gif'
-              ])
               msg.channel.send({
-                files: ['output/webcamgif.gif']
+                files: ['output/webcamwebm.webm']
               }).then(msg.react(config.reactions.success))
             })
           }, args.duration)

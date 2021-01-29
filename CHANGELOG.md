@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+- `webcamgif` command
+
+## Changed
+
+- Rename `webcamgif` to `webcamwebm`
+
 ### Fixed
 
 - `webcamgif` command only working once
