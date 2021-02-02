@@ -37,7 +37,7 @@ module.exports = class ActivityCommand extends commando.Command {
     const config = require('../../config')
     msg.react(config.reactions.progress)
 
-    console.log('[Activity] Changing activity: ' + args.type + ' ' + args.message.replace(/\n.*/, '...'))
+    console.log('[Activity] Changing activity: ' + args.type + ' ' + args.activity.replace(/\n.*/, '...'))
 
     this.client.user.setActivity(args.activity, {
       type: args.type
