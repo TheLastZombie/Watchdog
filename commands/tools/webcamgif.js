@@ -54,7 +54,7 @@ module.exports = class WebcamgifCommand extends commando.Command {
               c.stop()
               childProcess.execFileSync(pathToFfmpeg, [
                 '-hide_banner',
-                'loglevel', 'panic',
+                '-loglevel', 'panic',
                 '-y',
                 '-i', 'output/webcamgif.webm',
                 'output/webcamgif.gif'
