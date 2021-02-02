@@ -53,9 +53,10 @@ module.exports = class WebcamgifCommand extends commando.Command {
               fs.writeFileSync('output/webcamgif.webm', data)
               c.stop()
               childProcess.execFileSync(pathToFfmpeg, [
+                '-hide_banner',
+                'loglevel', 'panic',
                 '-y',
-                '-i',
-                'output/webcamgif.webm',
+                '-i', 'output/webcamgif.webm',
                 'output/webcamgif.gif'
               ])
               msg.channel.send({
