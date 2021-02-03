@@ -39,13 +39,13 @@
     "jimp": "^0.16.1",
     "node-notifier": "^9.0.0",
     "node-webcam": "^0.7.0",
-    "puppeteer": "^5.5.0",
+    "puppeteer": "^6.0.0",
     "robotjs": "^0.6.0",
     "say": "^0.16.0",
     "screenshot-desktop": "^1.12.3",
     "sharp": "^0.27.1",
     "sqlite": "^2.9.3",
-    "systeminformation": "^5.0.8"
+    "systeminformation": "^5.0.9"
   },
   "devDependencies": {
     "standard": "^16.0.3"
