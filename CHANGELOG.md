@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## Changed
 
 - Rename `webcamgif` to `webcamwebm`
+- Center `processes` and `services` table headings
 - Hide FFmpeg command output
 - Update compatibility table
 - Update dependencies

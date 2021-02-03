@@ -36,7 +36,7 @@ module.exports = class ProcessesCommand extends commando.Command {
           style: { head: [], border: [] }
         })
         cpuTable.push(
-          [{ colSpan: 2, content: 'Sorted by CPU usage' }],
+          [{ colSpan: 2, content: 'Sorted by CPU usage', hAlign: 'center' }],
           ...data.list
             .sort((x, y) => x.cpu - y.cpu)
             .reverse()
@@ -48,7 +48,7 @@ module.exports = class ProcessesCommand extends commando.Command {
           style: { head: [], border: [] }
         })
         memTable.push(
-          [{ colSpan: 2, content: 'Sorted by RAM usage' }],
+          [{ colSpan: 2, content: 'Sorted by RAM usage', hAlign: 'center' }],
           ...data.list
             .sort((x, y) => x.mem - y.mem)
             .reverse()
