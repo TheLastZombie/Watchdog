@@ -10,7 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - `webcamgif` command
 
-## Changed
+### Changed
 
 - Rename `webcamgif` to `webcamwebm`
 - Center `processes` and `services` table headings
