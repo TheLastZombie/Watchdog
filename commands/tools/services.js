@@ -29,9 +29,8 @@ module.exports = class ServicesCommand extends commando.Command {
         if (process.platform === 'win32') {
           const processes = await si.processes()
           data.forEach(x => {
-            if (x.pids[0] === '0') return data.filter(y => y !== x)
-            x.pcpu = processes.list.filter(y => y.pid === Number(x.pids[0]))[0].pcpu
-            x.pmem = processes.list.filter(y => y.pid === Number(x.pids[0]))[0].pmem
+            x.pcpu = processes.list.filter(y => y.pid === Number(x.pids[0]))[0].pcpu || 0
+            x.pmem = processes.list.filter(y => y.pid === Number(x.pids[0]))[0].pmem || 0
           })
         }
 

@@ -20,6 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 
 - `webcamwebm` command only working once
+- `services` command on Windows
 - `activity` command throwing type error
 
 ## [0.2.0] - 2021-01-27
