@@ -30,8 +30,8 @@ module.exports = class ServicesCommand extends commando.Command {
           const processes = await si.processes()
           data.forEach(x => {
             if (x.pids[0] === '0') return data.filter(y => y !== x)
-            x.pcpu = processes.list.filter(y => y.pid === Number(x.pids[0]))[0].pcpu
-            x.pmem = processes.list.filter(y => y.pid === Number(x.pids[0]))[0].pmem
+            x.cpu = processes.list.filter(y => y.pid === Number(x.pids[0]))[0].cpu || 0
+            x.mem = processes.list.filter(y => y.pid === Number(x.pids[0]))[0].mem || 0
           })
         }
 
@@ -41,10 +41,10 @@ module.exports = class ServicesCommand extends commando.Command {
         cpuTable.push(
           [{ colSpan: 2, content: 'Sorted by CPU usage' }],
           ...data
-            .sort((x, y) => x.pcpu - y.pcpu)
+            .sort((x, y) => x.cpu - y.cpu)
             .reverse()
             .slice(0, config.limits.services)
-            .map(x => [x.name, (x.pcpu).toFixed(2) + ' %'])
+            .map(x => [x.name, (x.cpu).toFixed(2) + ' %'])
         )
 
         let memTable = new Table({
@@ -53,10 +53,10 @@ module.exports = class ServicesCommand extends commando.Command {
         memTable.push(
           [{ colSpan: 2, content: 'Sorted by RAM usage' }],
           ...data
-            .sort((x, y) => x.pmem - y.pmem)
+            .sort((x, y) => x.mem - y.mem)
             .reverse()
             .slice(0, config.limits.services)
-            .map(x => [x.name, (x.pmem).toFixed(2) + ' %'])
+            .map(x => [x.name, (x.mem).toFixed(2) + ' %'])
         )
 
         cpuTable = cpuTable.toString().split('\n')

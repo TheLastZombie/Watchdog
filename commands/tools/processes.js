@@ -27,16 +27,21 @@ module.exports = class ProcessesCommand extends commando.Command {
 
     si.processes()
       .then(data => {
+        data.list.forEach(x => {
+          x.cpu = x.cpu || 0
+          x.mem = x.mem || 0
+        })
+
         let cpuTable = new Table({
           style: { head: [], border: [] }
         })
         cpuTable.push(
           [{ colSpan: 2, content: 'Sorted by CPU usage' }],
           ...data.list
-            .sort((x, y) => x.pcpu - y.pcpu)
+            .sort((x, y) => x.cpu - y.cpu)
             .reverse()
             .slice(0, config.limits.processes)
-            .map(x => [x.name, (x.pcpu).toFixed(2) + ' %'])
+            .map(x => [x.name, (x.cpu).toFixed(2) + ' %'])
         )
 
         let memTable = new Table({
@@ -45,10 +50,10 @@ module.exports = class ProcessesCommand extends commando.Command {
         memTable.push(
           [{ colSpan: 2, content: 'Sorted by RAM usage' }],
           ...data.list
-            .sort((x, y) => x.pmem - y.pmem)
+            .sort((x, y) => x.mem - y.mem)
             .reverse()
             .slice(0, config.limits.processes)
-            .map(x => [x.name, (x.pmem).toFixed(2) + ' %'])
+            .map(x => [x.name, (x.mem).toFixed(2) + ' %'])
         )
 
         cpuTable = cpuTable.toString().split('\n')
