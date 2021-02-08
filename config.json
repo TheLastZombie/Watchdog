@@ -1,6 +1,7 @@
 {
   "owner": "123456789012345678",
   "prefix": "!",
+  "notify": true,
   "blur": {
     "webcam": false,
     "screenshot": 10

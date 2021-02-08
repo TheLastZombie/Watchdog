@@ -49,7 +49,7 @@ client.on('commandRun', (cmd, res, msg) => {
     console.log('[Watchdog] ' + cmd.name + ' executed by ' + msg.author.tag + ' via direct message')
   }
 
-  if (msg.author.id === config.owner) return
+  if (!config.notify || msg.author.id === config.owner) return
   const notifier = require('node-notifier')
   if (msg.guild) {
     notifier.notify({
