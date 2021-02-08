@@ -44,8 +44,22 @@ client.on('message', msg => {
 
 client.on('commandRun', (cmd, res, msg) => {
   if (msg.guild) {
-    console.log('[Watchdog] ' + cmd.name + ' executed by ' + msg.author.tag + ' in ' + msg.guild.name + ' / ' + msg.channel.name)
+    console.log('[Watchdog] ' + cmd.name + ' executed by ' + msg.author.tag + ' in ' + msg.guild.name + ' (#' + msg.channel.name + ')')
   } else {
     console.log('[Watchdog] ' + cmd.name + ' executed by ' + msg.author.tag + ' via direct message')
+  }
+
+  if (msg.author.id === config.owner) return
+  const notifier = require('node-notifier')
+  if (msg.guild) {
+    notifier.notify({
+      title: 'Watchdog: ' + cmd.name + ' command executed',
+      message: 'Ran by ' + msg.author.tag + ' in ' + msg.guild.name + ' (#' + msg.channel.name + ')'
+    })
+  } else {
+    notifier.notify({
+      title: 'Watchdog: ' + cmd.name + ' command executed',
+      message: 'Ran by ' + msg.author.tag + ' via direct message'
+    })
   }
 })
