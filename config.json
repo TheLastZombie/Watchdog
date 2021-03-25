@@ -9,7 +9,8 @@
   "limits": {
     "processes": 10,
     "services": 10,
-    "webcamgif": 2500
+    "video": 2500,
+    "audio": 5000
   },
   "folders": {
     "download": "/home/user/Desktop",

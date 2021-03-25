@@ -7,7 +7,8 @@ let data = {
     color: 'gray',
     command: 'brew install',
     requirements: [
-      ['ImageSnap', 'http://iharder.sourceforge.net/current/macosx/imagesnap', 'imagesnap']
+      ['ImageSnap', 'http://iharder.sourceforge.net/current/macosx/imagesnap', 'imagesnap'],
+      ['sox', 'http://sox.sourceforge.net/', 'sox']
     ]
   },
   linux: {
@@ -15,6 +16,7 @@ let data = {
     color: 'yellow',
     command: 'apt install',
     requirements: [
+      ['arecord', 'https://alsa-project.org/wiki/Main_Page', 'alsa-utils'],
       ['Festival', 'http://www.cstr.ed.ac.uk/projects/festival', 'festival festvox-kallpc16k'],
       ['fswebcam', 'https://sanslogic.co.uk/fswebcam', 'fswebcam'],
       ['ImageMagick', 'https://imagemagick.org', 'imagemagick'],
@@ -26,7 +28,8 @@ let data = {
     color: 'cyan',
     command: 'winget install',
     requirements: [
-      ['PowerShell', 'https://microsoft.com/powershell', 'powershell']
+      ['PowerShell', 'https://microsoft.com/powershell', 'powershell'],
+      ['sox', 'http://sox.sourceforge.net/', 'sox']
     ]
   }
 }

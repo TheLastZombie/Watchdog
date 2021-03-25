@@ -24,7 +24,7 @@ module.exports = class WebcamgifCommand extends commando.Command {
           prompt: 'How long do you want the recording to be? Please specify a duration in ms (15000 maximum).',
           type: 'integer',
           validate: (x) => x < 15000 && x > 0,
-          default: require('../../config').limits.webcamgif
+          default: require('../../config').limits.video
         }
       ]
     })
