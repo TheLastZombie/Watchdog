@@ -19,6 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Hide FFmpeg command output
 - Improve command logging format
 - Update compatibility table
+- Update package-lock.json to version 2
 - Update dependencies
 
 ### Fixed
