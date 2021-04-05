@@ -48,7 +48,7 @@ npm start
 | clipboard    | ✔️       | ✔️      | ✔️         |
 | command      | ✔️       | ✔️      | ✔️         |
 | download     | ✔️       | ✔️      | ✔️         |
-| microphone   | ✔️       | ❓      | ❓         |
+| microphone   | ✔️       | ❓      | ✔️         |
 | move         | ✔️       | ✔️      | ✔️         |
 | neofetch     | ✔️       | ✔️      | ✔️         |
 | nickname     | ✔️       | ✔️      | ✔️         |
