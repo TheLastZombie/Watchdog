@@ -67,6 +67,23 @@ npm start
 | webcamgif    | ✔️       | ❓      | ✔️         |
 | webcamwebm   | ✔️       | ❓      | ✔️         |
 
+## Roadmap
+
+- [ ] Commands
+  - [ ] avatar (in meta category, administrator only, via URL or attachment)
+  - [ ] config (view and edit configuration, e. g. config prefix !, via JSONPath, censor token, edit for administrator only)
+  - [ ] play (via [youtube-dl](https://ytdl-org.github.io/youtube-dl/), length and volume limit)
+  - [ ] restart (administrator only)
+  - [ ] sql (select, update, delete, etc., administrator only)
+- [ ] Miscellaneous
+  - [ ] Add blacklist, delay and timeout configuration values, apply to every command
+  - [ ] Add [JSON schema](https://json-schema.org/) for validation of config.json
+  - [ ] Hide additional output for webcamgif and webcamwebm commands
+  - [ ] List guilds the bot has connected to on startup or as command
+  - [ ] Make notification format customizable via config.json
+  - [ ] Test remaining commands on Mac OS
+  - [ ] Test services command on Windows (percent values may return zero)
+
 ## Alternatives
 
 - [M3IY0U/Stalkbot](https://github.com/M3IY0U/Stalkbot)
