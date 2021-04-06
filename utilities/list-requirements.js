@@ -18,6 +18,7 @@ let data = {
     requirements: [
       ['arecord', 'https://alsa-project.org/wiki/Main_Page', 'alsa-utils'],
       ['Festival', 'http://www.cstr.ed.ac.uk/projects/festival', 'festival festvox-kallpc16k'],
+      ['FFmpeg', 'https://ffmpeg.org/', 'ffmpeg'],
       ['fswebcam', 'https://sanslogic.co.uk/fswebcam', 'fswebcam'],
       ['ImageMagick', 'https://imagemagick.org', 'imagemagick'],
       ['libnotify', 'https://gitlab.gnome.org/GNOME/libnotify', 'libnotify-bin']

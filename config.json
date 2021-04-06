@@ -12,6 +12,7 @@
     "video": 2500,
     "audio": 5000
   },
+  "pulse": "alsa_input.pci-0000_00_1f.3.multichannel-input",
   "folders": {
     "download": "/home/user/Desktop",
     "upload": "/home/user/Downloads",

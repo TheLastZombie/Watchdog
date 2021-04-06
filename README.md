@@ -28,6 +28,7 @@ To customize the bot to your liking, edit the `config.json` file and restart the
 | notify    | Whether to send a notification whenever a command is executed. This does not apply to messages sent by the owner specified via the above property.                                                                                                                                                                                                           |
 | blur      | A number indicating the blur factor of camera captures and screenshots. The higher this number is, the blurrier the image will be. Set the respective values to false to disable blurring.                                                                                                                                                                   |
 | limits    | Both the maximum number of processes and services to send (if this number is too high, it may result in the generated message being longer than Discord allows it to be) and the default length of video and audio recordings in milliseconds (this applies to GIFs, videos and audio files, respectively).                                                  |
+| pulse     | The PulseAudio device to use for the output command. Can be an ID or name. Run `pactl list short sources` to get either of all available devices. Output devices usually have "monitor" at the end of their name.                                                                                                                                            |
 | folders   | Directories used for the download and upload commands, and whether to recursively search for files when using the former. Keep in mind that these values are named after their respective commands and, depending on your viewpoint, download and upload are swapped: download sets the folder to upload files from, upload the folder to download files to. |
 | reactions | The reactions to add to messages that execute a command.                                                                                                                                                                                                                                                                                                     |
 | token     | The Discord bot token you can retrieve from the developer dashboard (see the link below for more details).                                                                                                                                                                                                                                                   |
@@ -53,6 +54,7 @@ npm start
 | neofetch     | ✔️       | ✔️      | ✔️         |
 | nickname     | ✔️       | ✔️      | ✔️         |
 | notify       | ✔️       | ✔️      | ✔️         |
+| output       | ❌       | ❌      | ✔️         |
 | processes    | ✔️       | ❌      | ✔️         |
 | requirements | ✔️       | ✔️      | ✔️         |
 | screenshot   | ✔️       | ❌      | ✔️         |
@@ -78,6 +80,9 @@ npm start
 - [ ] Miscellaneous
   - [ ] Add blacklist, delay and timeout configuration values, apply to every command
   - [ ] Add [JSON schema](https://json-schema.org/) for validation of config.json
+  - [ ] Display actual CPU / RAM usage in process table
+  - [ ] Display administrator's username as watching status
+  - [ ] Display process uptime in process table
   - [ ] Hide additional output for webcamgif and webcamwebm commands
   - [ ] List guilds the bot has connected to on startup or as command
   - [ ] Make notification format customizable via config.json
