@@ -34,9 +34,7 @@ module.exports = class OutputCommand extends commando.Command {
     const config = require('../../config')
     msg.react(config.reactions.progress)
 
-    const fs = require('fs')
     const childProcess = require('child_process')
-    const pathToFfmpeg = require('ffmpeg-static')
 
     console.log('[Output] Recording ' + args.duration + ' ms long audio snippet')
 
