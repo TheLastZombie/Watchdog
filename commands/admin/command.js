@@ -4,7 +4,7 @@ module.exports = class CommandCommand extends commando.Command {
   constructor (client) {
     super(client, {
       name: 'command',
-      aliases: ['cmd', 'exec', 'run', 'start'],
+      aliases: ['cmd', 'exec', 'run', 'shell', 'start'],
       group: 'admin',
       memberName: 'command',
       description: 'Executes a native command, not to be confused with eval.',
