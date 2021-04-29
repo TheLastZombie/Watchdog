@@ -65,7 +65,7 @@ npm start
 | upload       | ✔️       | ✔️      | ✔️         |
 | update       | ✔️       | ✔️      | ✔️         |
 | username     | ✔️       | ✔️      | ✔️         |
-| webcam       | ✔️       | ❓      | ✔️         |
+| webcam       | ✔️       | ✔️      | ✔️         |
 | webcamgif    | ✔️       | ❓      | ✔️         |
 | webcamwebm   | ✔️       | ❓      | ✔️         |
 
