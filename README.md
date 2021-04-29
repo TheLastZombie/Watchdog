@@ -49,7 +49,7 @@ npm start
 | clipboard    | ✔️       | ✔️      | ✔️         |
 | command      | ✔️       | ✔️      | ✔️         |
 | download     | ✔️       | ✔️      | ✔️         |
-| microphone   | ✔️       | ❓      | ✔️         |
+| microphone   | ✔️       | ❌      | ✔️         |
 | move         | ✔️       | ✔️      | ✔️         |
 | neofetch     | ✔️       | ✔️      | ✔️         |
 | nickname     | ✔️       | ✔️      | ✔️         |
@@ -86,7 +86,6 @@ npm start
   - [ ] Hide additional output for webcamgif and webcamwebm commands
   - [ ] List guilds the bot has connected to on startup or as command
   - [ ] Make notification format customizable via config.json
-  - [ ] Test remaining commands on Mac OS
   - [ ] Test services command on Windows (percent values may return zero)
 
 ## Alternatives
