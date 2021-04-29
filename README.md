@@ -66,8 +66,8 @@ npm start
 | update       | ✔️       | ✔️      | ✔️         |
 | username     | ✔️       | ✔️      | ✔️         |
 | webcam       | ✔️       | ✔️      | ✔️         |
-| webcamgif    | ✔️       | ❓      | ✔️         |
-| webcamwebm   | ✔️       | ❓      | ✔️         |
+| webcamgif    | ✔️       | ✔️      | ✔️         |
+| webcamwebm   | ✔️       | ✔️      | ✔️         |
 
 ## Roadmap
 
