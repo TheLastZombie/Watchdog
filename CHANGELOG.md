@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Update roadmap in README
 - Update compatibility table
+- Update dependencies
 
 ## [0.3.0] - 2021-04-05
 
