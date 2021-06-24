@@ -94,3 +94,4 @@ npm start
 - [M3IY0U/StalkbotGUI](https://github.com/M3IY0U/StalkbotGUI)
 - [Jerrynicki/Stalkbot](https://github.com/Jerrynicki/Stalkbot)
 - [Jerrynicki/Stalkbot-Rewrite](https://gitlab.com/Jerrynicki/stalkbot-rewrite)
+- [deingithub/beanstalk](https://github.com/deingithub/beanstalk)
